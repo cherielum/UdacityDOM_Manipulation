@@ -27,3 +27,14 @@ navList = $('.nav-list');
 firstItem = navList.children().first();
 link = firstItem.find('a');
 link.attr('href', '#1');
+
+//change the font-size of all the article-items to 20px
+var articleItems;
+
+articleItems = 
+
+// $('.article-item' ).css({
+//     fontSize: "20px"
+// });
+
+$('.article-item' ).css("font-size" , "20px");
