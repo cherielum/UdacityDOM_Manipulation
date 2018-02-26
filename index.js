@@ -38,3 +38,57 @@ articleItems =
 // });
 
 $('.article-item' ).css("font-size" , "20px");
+
+//use jQuery's val method to make live changes to the 'Cool Articles'
+
+$('#input').on('change', function() {
+    var val;
+    // val = $( "h1" ).text( "This is Cameron's test" );
+    val = $('#input').val();
+    h1 = $('.articles').children('h1');
+    h1.text(val);
+
+});
+
+
+//remove the <ul> from the first article item!
+
+
+//articleItems = $('.article-item');
+//ul = articleItems.find('ul').remove();
+
+var articlleItems, ul; 
+articleItems = $('.article-item');
+ul = articleItems.find('ul');
+ul.remove();
+
+//'#family2' should be a sibling of and come after '#family1'. '#bruce' should be the only immediate child
+//of '#family2'. '#bruce' should have two <div>s as children, '#madison' and '#hunter'.
+var family1, family2, bruce, madison, hunter; 
+
+
+family1= $('#family1');
+family2= $('<div id = "family2"> Family 2</div>');
+bruce = $('<div id = "bruce">  </div>');
+madison = $(' <div id = "madison">Madison </div>');
+hunter = $(' <div id = "hunter">Hunter </div>');
+
+family2.insertAfter(family1);
+family2.append(bruce);
+bruce.append(madison);
+bruce.append(hunter);
+
+//
+
+function number (){
+    var text, number; 
+
+    text = $(this).text();
+    number = text.length; 
+    $(this).text(text + " " + number);
+}
+
+
+$( "p" ).each(number);
+
+
