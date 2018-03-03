@@ -91,4 +91,9 @@ function number (){
 
 $( "p" ).each(number);
 
+//create a function that displays an image that's connected to HTMNL document
+
+$(function() {
+    $('img').attr('src', 'http://placekitten.com/350/150');
+});
 
